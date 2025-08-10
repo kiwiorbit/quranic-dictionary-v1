@@ -27,7 +27,7 @@
 
 .letter-wheel {
     position: relative;
-    height: 150px;
+    height: 140px;
     width: 90px;
     overflow: hidden;
 /*     border-radius: 12px;
@@ -179,11 +179,10 @@
 }
 
 /* Verb Forms Display - 2x2 Grid */
-.verb-forms {
+.s {
     display: flex;
     flex-wrap: wrap;
     padding: 12px 10px;
-    background: #f8f8f8;
     gap: 8px;
     justify-content: center;
     margin: 0 10px 15px;
