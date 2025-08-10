@@ -30,10 +30,10 @@
     height: 150px;
     width: 90px;
     overflow: hidden;
-    border-radius: 12px;
+/*     border-radius: 12px;
     background: linear-gradient(180deg, rgba(222,174,53,0.05) 0%, rgba(222,174,53,0.1) 50%, rgba(222,174,53,0.05) 100%);
     box-shadow: inset 0 2px 4px rgba(222,174,53,0.1);
-    border: 1px solid rgba(222,174,53,0.2);
+    border: 1px solid rgba(222,174,53,0.2); */
 }
 
 .letter-option {
