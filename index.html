@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Qur'anic Dictionary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Arabic+Naskh:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Qur'anic Dictionary">
+    <link rel="apple-touch-icon" href="images/icon-192x192.png">
+    <meta name="msapplication-TileImage" content="images/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/landscape.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo-container">
+                <a href="https://khuddam.co.nz/" target="_blank"> <!-- Logo made clickable -->
+                    <img src="https://khuddam.co.nz/images/khuddam-logo-white.png" alt="Logo">
+                </a>
+            </div>
+            <h1 class="app-title">Digital Qur'anic Dictionary</h1>
+            <p class="app-subtitle">By Late Lutfur Rahman Khan Sb</p>
+            <p class="app-description">This digital dictionary is free of cost for the purpose of Sadaqah Jariyah (Continuous charity).</p>
+        </div>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="letter-selectors">
+            <div class="letter-selector">
+                <div class="letter-label">ل كلمة</div>
+                <div class="letter-wheel" id="letter3">
+                    </div>
+            </div>
+            
+            <div class="letter-selector">
+                <div class="letter-label">ع كلمة</div>
+                <div class="letter-wheel" id="letter2">
+                    </div>
+            </div>
+            
+            <div class="letter-selector">
+                <div class="letter-label">ف كلمة</div>
+                <div class="letter-wheel" id="letter1">
+                    </div>
+            </div>
+                </div>
+
+                <div class="root-display">
+                    <div class="root-word" id="rootWord">فعل</div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="verb-forms">
+            <div class="verb-form">
+                <div class="verb-title">Past</div>
+                <div class="verb-word" id="pastTense">فَعَلَ</div>
+            </div>
+            
+            <div class="verb-form">
+                <div class="verb-title">Present & Future</div>
+                <div class="verb-word" id="presentTense">يَفْعَلُ</div>
+            </div>
+            
+            <div class="verb-form">
+                <div class="verb-title">Imperative</div>
+                <div class="verb-word" id="imperative">اِفْعَلْ</div>
+            </div>
+            
+            <div class="verb-form">
+                <div class="verb-title">Verbal Noun (Masdar)</div>
+                <div class="verb-word" id="masdar">فَعْلًا</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="searchBtn">
+                <i class="fas fa-search"></i>
+                Search
+            </button>
+            <button id="dictionaryBtn">
+                <i class="fas fa-book"></i>
+                Dictionary
+            </button>
+        </div>
+    </div>
+    
+    <div class="modal" id="dictionaryModal">
+        <div class="modal-content">
+            <div class="modal-header" id="dictionaryModalHeader">
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                Educational Video
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <!-- YouTube video embed -->
+                    <iframe src="https://www.youtube.com/embed/Io2f2PVz0UE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div style="padding: 20px; text-align: center;">
+                    <h3>How to Use the Qur'anic Dictionary</h3>
+                    <p>This video will explain how to effectively use the digital Qur'anic dictionary to enhance your understanding of Arabic root words.</p>
+                    <p>You'll learn about the structure of Arabic verbs and how to analyze word formations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                About This Dictionary
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="images/QuranicDictionary.jpg" alt="Quranic Dictionary Cover" class="info-modal-image">
+                <p class="info-modal-text">
+                    <strong>KHUDDAM-UL-QURAN NZ © 2021</strong><br>
+                    This dictionary was written by Lutfur Rahman Sb (late) and published by Al Balagh Foundation, Lahore, Pakistan. For the sake of Allah (SWT), Khuddam-ul-Quran NZ has endeavoured to digitise it for the benefit of all Arabic grammar students, enabling a quick search for the meanings of Qur’anic words. Alhamdulillah. May Allah (SWT) accept our efforts. Ameen.<br>
+                    For feedback <a href="mailto:khudaamulqurannz@gmail.com">click here</a><br>
+                    khudaamulqurannz@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="fourHuroofModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                Words with 4 Huroof
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This is a placeholder page for "Words with 4 Huroof".</p>
+                <p>You can add detailed content here later regarding words with four root letters.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="notesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                Important Notes
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This is a placeholder page for "Important Notes".</p>
+                <p>You can add important information, grammar rules, or usage tips here later.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/loader.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/dictionary.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* Base styles for all screen sizes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Remove the gold border and make container fully responsive */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Removed: border: 4px solid #deae35; */
+    /* Updated shadow to be neutral */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Optimize height for mobile devices */
+@media (max-width: 768px) {
+    body {
+        min-height: 100vh;
+        max-height: 100vh;
+        padding: 5px;
+        align-items: flex-start;
+        padding-top: 5px;
+        overflow: hidden;
+    }
+
+    .container {
+        height: calc(100vh - 10px);
+        max-height: calc(100vh - 10px);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+        padding-top: 10px;
+    }
+    
+    .container {
+        min-height: calc(100vh - 20px);
+        border-radius: 15px;
+    }
+}

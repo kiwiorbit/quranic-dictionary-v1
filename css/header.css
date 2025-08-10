@@ -1,0 +1,184 @@
+/* Header Styles */
+.header {
+    background: #101010;
+    color: white;
+    padding: 80px 25px 40px;
+    text-align: center;
+    position: relative;
+    min-height: 220px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.app-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    margin: 0 60px 10px 60px;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app-subtitle {
+    font-size: 0.85rem;
+    color: #deae35;
+    font-weight: 500;
+    margin-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app-description {
+    font-size: 0.7rem;
+    color: #b8b8b8;
+    line-height: 1.5;
+    max-width: 260px;
+    margin: 0 auto 20px auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    padding: 10px 15px;
+    background: rgba(222, 174, 53, 0.08);
+    border-radius: 8px;
+    border: 1px solid rgba(222, 174, 53, 0.15);
+}
+
+/* Hamburger Menu Button */
+.menu-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.menu-btn:hover {
+    background: rgba(222, 174, 53, 0.1);
+    transform: scale(1.1);
+}
+
+.menu-btn i {
+    color: #deae35;
+    font-size: 1.2rem;
+}
+
+
+
+/* Navigation Menu */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 80px 20px 20px;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-bottom: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background: rgba(222, 174, 53, 0.2);
+    color: #deae35;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Header Adjustments */
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+    
+    .app-title {
+        font-size: 1.5rem;
+    }
+    
+    .app-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .app-description {
+        font-size: 0.8rem;
+    }
+    
+    .menu-btn {
+        width: 35px;
+        height: 35px;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .nav-menu {
+        width: 280px;
+        left: -280px;
+    }
+}

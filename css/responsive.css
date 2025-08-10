@@ -1,0 +1,290 @@
+/* Mobile Responsiveness: Styles applied when screen width is 480px or less */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+        padding-top: 5px;
+    }
+
+    /* Main content area optimization */
+    .main-content {
+        height: calc(100vh - 170px);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Letter selector adjustments */
+    .letter-selectors {
+        gap: 6px;
+        padding: 10px 8px;
+        margin: 0 8px 10px;
+    }
+
+    .letter-selector {
+        width: 95px;
+    }
+
+    .letter-wheel {
+        height: 160px;
+        width: 80px;
+    }
+
+    .letter-option {
+        height: 40px;
+        font-size: 1.8rem;
+    }
+
+    .letter-option.selected {
+        font-size: 2.2rem;
+    }
+
+    .letter-label {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    /* Root word display adjustments */
+    .root-display {
+        padding: 15px;
+        margin: 15px 10px 20px;
+    }
+
+    .root-word {
+        font-size: 3rem;
+        height: 75px;
+    }
+    
+    /* Button adjustments */
+    .controls {
+        padding: 8px 10px;
+        gap: 10px;
+        margin-top: auto;
+        flex-shrink: 0;
+    }
+
+    #searchBtn, #dictionaryBtn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+    }
+
+    /* Verb Forms Display (Results) adjustments for 2x2 grid */
+    .verb-forms {
+        gap: 8px;
+        padding: 10px;
+        margin: 0 10px 15px;
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .verb-form {
+        flex: 0 0 calc(50% - 4px);
+        aspect-ratio: 1;
+        min-width: unset;
+        padding: 12px 8px;
+        height: 110px;
+        max-height: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .verb-title {
+        font-size: 0.7rem;
+        margin-bottom: 4px;
+        color: #666;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        flex-shrink: 0;
+    }
+
+    .verb-word {
+        font-size: 1.9rem;
+        line-height: 1.1;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 45px;
+    }
+
+    .footer-links {
+        gap: 20px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) and (min-width: 481px) {
+    .letter-selectors {
+        gap: 12px;
+        padding: 18px 15px;
+    }
+    
+    .letter-selector {
+        width: 110px;
+    }
+    
+    .letter-wheel {
+        height: 165px;
+        width: 95px;
+    }
+    
+    .root-word {
+        font-size: 3rem;
+        height: 70px;
+    }
+    
+    .verb-forms {
+        gap: 10px;
+        padding: 12px;
+    }
+    
+    .verb-form {
+        padding: 15px;
+        min-height: 100px;
+    }
+
+    .verb-title {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+        flex-shrink: 0;
+    }
+
+    .verb-word {
+        font-size: 2.2rem;
+        line-height: 1.1;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+    }
+}
+
+/* Large screen optimizations */
+@media (min-width: 769px) {
+    .container {
+        max-width: 600px;
+    }
+    
+    .letter-selectors {
+        gap: 20px;
+        padding: 25px;
+    }
+    
+    .letter-selector {
+        width: 130px;
+    }
+    
+    .letter-wheel {
+        height: 200px;
+        width: 110px;
+    }
+    
+    .root-word {
+        font-size: 4rem;
+        height: 90px;
+    }
+    
+    .verb-forms {
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .verb-form {
+        padding: 20px;
+        min-height: 110px;
+    }
+
+    .verb-title {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        flex-shrink: 0;
+    }
+
+    .verb-word {
+        font-size: 2.4rem;
+        line-height: 1.1;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 55px;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        align-items: flex-start;
+        padding-top: 10px;
+    }
+    
+    .container {
+        min-height: auto;
+        max-height: calc(100vh - 20px);
+    }
+    
+    .header {
+        padding: 15px;
+    }
+    
+    .app-title {
+        font-size: 1.4rem;
+    }
+    
+    .app-subtitle, .app-description {
+        font-size: 0.8rem;
+    }
+    
+    .letter-wheel {
+        height: 120px;
+    }
+    
+    .root-word {
+        font-size: 2rem;
+        height: 40px;
+    }
+    
+    .verb-forms {
+        padding: 8px;
+        gap: 6px;
+    }
+    
+    .verb-form {
+        padding: 10px 6px;
+        min-height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .verb-title {
+        font-size: 0.65rem;
+        margin-bottom: 3px;
+        flex-shrink: 0;
+    }
+
+    .verb-word {
+        font-size: 1.7rem;
+        line-height: 1.1;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+    }
+    
+    .footer-links {
+        padding: 8px;
+        gap: 15px;
+    }
+}
